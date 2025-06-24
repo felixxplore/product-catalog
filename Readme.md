@@ -63,10 +63,13 @@ A RESTful microservice built with Spring Boot and MongoDB for managing a product
 ---
 
 ## API Endpoints
+- ### **Note : For API Testing use POSTMAN for better user experience**
+
+
 - **Create Product**:
   ```bash
-  curl -X POST http://localhost:8080/products \
-  -H "Content-Type: application/json" \
+  curl -X POST http://localhost:8080/products 
+  -H "Content-Type: application/json" 
   -d '{"name":"Laptop","price":1000.0,"category":"Electronics","inStock":true}'
   ```
   Response: 201 Created, JSON with product details.
@@ -88,8 +91,8 @@ A RESTful microservice built with Spring Boot and MongoDB for managing a product
 
 - **Update Product**:
   ```bash
-  curl -X PUT http://localhost:8080/products/<product-id> \
-  -H "Content-Type: application/json" \
+  curl -X PUT http://localhost:8080/products/<product-id> 
+  -H "Content-Type: application/json" 
   -d '{"name":"Updated Laptop","price":1200.0,"category":"Electronics","inStock":false}'
   ```
   Response: 200 OK, updated JSON.
@@ -100,6 +103,8 @@ A RESTful microservice built with Spring Boot and MongoDB for managing a product
   curl -X DELETE http://localhost:8080/products/<product-id>
   ```
   Response: 204 No Content.
+
+
 
 ## MongoDB Configuration
 - **Database**: `catalogdb`
